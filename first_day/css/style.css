@@ -3,6 +3,7 @@ html,body{
     font-size: 10px;
 }
 .base {
+    margin: 0;
     background: #000 url(../media/pic/eu6ue9y1jei-jace-grandinetti.jpg) no-repeat center center fixed;
     -webkit-background-size: cover;
     background-size: cover;
