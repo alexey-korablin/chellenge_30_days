@@ -1,0 +1,22 @@
+// Mixines
+.sizeWH (@param: 0) {
+    width: @rootSizeREM + @param;
+    height: @rootSizeREM + @param;
+}
+
+.fullSize () {
+    width: 100%;
+    height: 100%;
+}
+
+.border (@wide: 1px, @tracing: solid, @color: @clockBorder) {
+    border: @wide @tracing @color;
+}
+
+.relative () {
+    position: relative;
+}
+
+.absolute () {
+    position: absolute;
+}

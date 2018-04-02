@@ -1,0 +1,40 @@
+.clock-box {
+    .sizeWH(@param: 12);
+    .border(@rootSize);
+    border-radius: 50%;
+    padding: 0.2rem;
+    margin: 2rem;
+    .relative;
+
+    &--face {
+        .relative;
+        .fullSize;
+        transform: translateY(-3px);
+    }
+
+    &--hand {
+        width: 50%;
+        height: 6px;
+        background-color: @clockHand;
+        .absolute;
+        top: 50%;
+        transform-origin: 100%;
+        transform: rotate(90deg);
+        transition: all 0.05s;
+        transition-timing-function: cubic-bezier(0.1, 2.7, 0.58, 1);
+
+        &__second {
+            height: 2px;
+            background-color: @cloclSecondHend;
+        }
+
+            &__minute {
+                height: 4px;
+            }
+
+        &__hour {
+            width: 45%;
+            transform-origin: 105%;
+        }
+    }
+}
