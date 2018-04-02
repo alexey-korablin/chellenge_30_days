@@ -21,7 +21,7 @@
     }
 
     function displayMatches() {
-        const pattern = /(\d|\w)+/;
+        const pattern = /(\d|\w|-)$/;
         let matchArray = [];
         if (pattern.test(this.value)) {
             matchArray = findMatches(this.value, cities);
