@@ -43,9 +43,12 @@
         minuteHand.style.transform = `rotate(${minutesDegrees}deg)`;
 
         const hours = now.getHours();
-        const hoursDegrees = ((hours / 60) * 360) + 90;
+        const hoursDegrees = ((hours / 12) * 360) + ((minutes / 60) * 30) + 90;
         checkCondition({name: 'hours', count: hours});
+        console.log(hoursDegrees);
         hourHand.style.transform = `rotate(${hoursDegrees}deg)`;
+
+        console.log(`Seconds: ${seconds}; Minutes: ${minutes}; Hours: ${hours}`);
     }
 
     setInterval(setDate, 1000);
