@@ -13,6 +13,6 @@ global.$ = {
 $.path.tasks.forEach((task) => require(task)());
 
 $.gulp.task('default', $.gulp.series(
-    $.gulp.parallel('clean', 'test', 'script', 'style:dev', 'layout'),
+    $.gulp.parallel('clean', 'test', 'script', 'style:dev', 'files', 'layout'),
     $.gulp.parallel('serve', 'watch')
 ));

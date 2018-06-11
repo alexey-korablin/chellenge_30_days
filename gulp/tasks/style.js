@@ -22,10 +22,7 @@ module.exports = () => {
     });
 
     $.gulp.task('style:dev', () => {
-        return $.gulp.src('app/styles/**/main.less')
-        .pipe($.gp.less({
-            'include css': true
-        }))
+        return $.gulp.src('app/styles/**/main.css')
         .pipe($.gp.autoprefixer({
             browsers: ['last 10 versions'],
             cascade: false
